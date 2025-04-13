@@ -18,18 +18,18 @@ get_header(); ?>
 				$sections = apply_filters( 'onepress_frontpage_sections_order', array(
                     'banner','features', 'about', 'services', 'videolightbox', 'gallery', 'counter', 'team',  'news', 'contact'
                 ) );
-
-				foreach ( $sections as $section ){
-					/**
-                     * Load section if active
-                     *
-					 * @since 2.1.1
-					 */
-				    if ( Onepress_Config::is_section_active( $section ) ) {
-					    onepress_load_section( $section );
-                    }
-
-				}
+				onepress_load_section( 'banner' );
+				onepress_load_section( 'home' );
+				// foreach ( $sections as $section ){
+				// 	/**
+                //      * Load section if active
+                //      *
+				// 	 * @since 2.1.1
+				// 	 */
+				//     if ( Onepress_Config::is_section_active( $section ) ) {
+				// 	    onepress_load_section( $section );
+                //     }
+				// }
 
 			} else {
 				do_action( 'onepress_frontpage_section_parts' );
