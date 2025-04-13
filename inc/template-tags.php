@@ -297,12 +297,14 @@ if ( ! function_exists( 'onepress_header' ) ) {
 			 */
 			do_action( 'onepress_site_start' );
 		}
-
-		if ( $pos != 'below_hero' ) {
-			if ( is_page_template( 'template-frontpage.php' ) ) {
-				do_action( 'onepress_header_end' );
-			}
-		}
+		
+		
+		// Hide Banner
+		// if ( $pos != 'below_hero' ) {
+		// 	if ( is_page_template( 'template-frontpage.php' ) ) {
+		// 		do_action( 'onepress_header_end' );
+		// 	}
+		// }
 
 			do_action( 'onepress_header_section_end' );
 		echo '</div>';
