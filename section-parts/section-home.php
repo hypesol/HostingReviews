@@ -20,20 +20,7 @@ $content_source = get_theme_mod('onepress_about_content_source');
         <?php } ?>
 
         <div class="<?php echo esc_attr(apply_filters('onepress_section_container_class', 'container', 'about')); ?>">
-            <?php if ($title || $subtitle || $desc) { ?>
-                <div class="section-title-area">
-                    <?php if ($subtitle != '') {
-                        echo '<h5 class="section-subtitle">' . esc_html($subtitle) . '</h5>';
-                    } ?>
-                    <?php if ($title != '') {
-                        echo '<h2 class="section-title">' . esc_html($title) . '</h2>';
-                    } ?>
-                    <?php if ($desc != '') {
-                        echo '<div class="section-desc">' . wp_kses_post(apply_filters('onepress_the_content', $desc)) . '</div>';
-                    } ?>
-                </div>
-            <?php } ?>
-            
+          
                 <?php echo do_shortcode('[display_hostings]'); ?>
             
         </div>
