@@ -12,6 +12,9 @@
 
 	$hcl1_largetext  = get_theme_mod('onepress_hcl1_largetext', wp_kses_post('We help <span class="js-rotating">Start | Grow | Manage</span> your online business', 'onepress'));
 	$hcl1_smalltext  = get_theme_mod('onepress_hcl1_smalltext', wp_kses_post('Compare the leading <strong>web hosting companies 2025</strong> that offer fast and secure services, uptime guarantee,  excellent pricing, and easy migration features.', 'onepress'));
+	// $hcl1_smalltext2  = get_theme_mod('onepress_hcl1_smalltext', wp_kses_post('Last Updated: ' . get_last_site_modified_date()', 'onepress'));
+	$hcl1_smalltext2 = get_theme_mod('onepress_hcl1_smalltext', wp_kses_post('Last Updated: ' . get_last_site_modified_date()));
+
 
 
 	?>
@@ -23,11 +26,11 @@
 			<?php if ($hcl1_smalltext != '') {
 				echo '<div class="hero-small-text">' . apply_filters('onepress_the_content', wp_kses_post($hcl1_smalltext)) . '</div>';
 			} ?>
-			<p style="font-size: 12px; margin:0"><?php echo 'Last Updated: ' . get_last_site_modified_date(); ?></p>
+			<?php if ($hcl1_smalltext2 != '') {
+				echo '<div class="hero-small-text">' . apply_filters('onepress_the_content', wp_kses_post($hcl1_smalltext2)) . '</div>';
+			} ?>
 		</div>
+		
 	</div>
-	<?php
 
-
-	?>
 </section>
