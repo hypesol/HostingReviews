@@ -22,7 +22,9 @@ $content_source = get_theme_mod('onepress_about_content_source');
         <div class="<?php echo esc_attr(apply_filters('onepress_section_container_class', 'container', 'about')); ?>">
                         
                 <?php 
-                    echo do_shortcode('[home_banners]');
+                echo do_shortcode('[hosting_banner]');
+
+                    // echo do_shortcode('[home_banners]');
                     echo do_shortcode('[display_hostings]'); 
                 ?>
             
